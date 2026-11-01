@@ -813,6 +813,7 @@ Bicycle::Bicycle() : Vehicle(), rackNumber(0)
 //               with exit status 1. Must pass ticket and entry to
 //               Vehicle(int, ClockTime) in its initialization section.
 Bicycle::Bicycle(int ticket, ClockTime entry, int rack)
+: Vehicle(ticket, entry), rackNumber(rack)
 {
     if (rack < 1 || rack > BICYCLE_RACKS)
     {
